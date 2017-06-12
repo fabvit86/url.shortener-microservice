@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>URL Shortener Microservice</title>
+		<link rel="stylesheet" href="/public/css/style.css" type="text/css">
+	</head>
+	<body>
+		<h1>URL Shortener Microservice</h1>
+		<div class="container">
+			<p>USAGE:
+				<ol>
+					<li>Pass a URL as a parameter using the /getnewurl/ path, the API will check if the URL is valid.</li>
+					<li>If it is, it will create a shortened URL and return it in a JSON object. Visiting the shortened URL will redirect to the original link.</li>
+					<li>If it isn't, the JSON response will contain an "Invalid URL" error message.</li>
+				</ol>
+			</p>
+			<p>
+				EXAMPLES:
+				<ul>
+					<li>https://fabvit86-urlshort-ms.herokuapp.com/ will return {"original_url":"http://www.nba.com", "short_url":"https://fabvit86-urlshort-ms.herokuapp.com/SHORTENED_URL"}.</li>
+					<li>Passing an invalid URL will return {"error":"Invalid URL"}.</li>
+					<li>Visiting https://fabvit86-urlshort-ms.herokuapp.com/</li>
+				</ul>
+			</p>
+		</div>
+		<div class="container" id="credits">
+			<p id='credits-p'>
+				created by <a href="https://www.linkedin.com/in/fabrizio-vitelli-0539aba4/" target="_blank">Fabrizio Vitelli</a>
+			</p>
+		</div>
+	</body>
+</html>
