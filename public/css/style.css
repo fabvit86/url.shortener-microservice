@@ -1,6 +1,9 @@
 h1{
 	text-align: center;
 }
+a, a:visited{
+	color: mediumblue;
+}
 p#credits-p{
 	text-align: center;
 	margin-top: 200px;
