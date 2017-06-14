@@ -56,6 +56,7 @@ function UrlHandler(){
 	this.getLink = function(req, res){
 		Urls.findOne({"shortUrl": req.originalUrl.slice(1)}, function(err, result){
 			if(err) throw err;
+			if(!result) return res.send("Invalid short URL");
 			res.redirect(result.originalUrl);
 		});
 	};

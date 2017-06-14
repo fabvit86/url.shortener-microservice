@@ -11,8 +11,10 @@ module.exports = function (app){
 		res.sendFile(rootPath+'/public/index.html');
 	});
 
-	//route to use to get a new short URL:
+	//path to use to generate a new short URL:
 	app.route('/getnewurl/*').get(urlHandler.getUrl);
 
-	app.route('/*').get(urlHandler.getLink);
+	//passing a shorturl will redirect to the original URL:
+	app.route('/:shorturl').get(urlHandler.getLink);
+
 }
